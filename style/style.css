@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+form input {
+    width: 50%;
+    border: 1px solid #ccc;
+    border-radius: 8px 0 0 8px;
+    padding: 10px 50px 10px 5px;
+}
+
+form button {
+    border: 1px solid #ccc;
+    border-radius: 0 8px 8px 0;
+    padding: 10px 50px 10px 50px; 
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: purple;
+    color: white;
+}
+
+datalist{
+   cursor: pointer;
+}
+
+#imagem-container {
+    display: flex;
+    width: 100%;    
+    justify-content: center;
+    margin-top: 50px;     
+    flex-wrap: wrap;
+}
+#imagem-container img {
+    display: flex;
+    height: 140px; 
+    margin: 10px;
+}
+
+.aviso p {
+    font-size: 50px;
+    font-family: Poppins, sans-serif;
+    color: purple
+}
+
+@keyframes ldio {
+    0%    { transform: translate(2px,2px) }
+   33.33% { transform: translate(102px,2px) }
+   66.66% { transform: translate(42px,102px) }
+  100%    { transform: translate(2px,2px) }
+}
+
+
+.ldio > div {
+  transform: scale(0.8);
+  transform-origin: 100px 100px;
+}
+
+.ldio > div > div {
+  animation: ldio 1s linear infinite;
+  position: absolute
+}
+
+.ldio > div > div div:nth-child(1) {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 12px solid #e90c59;
+  background: #46dff0
+}
+
+.ldio > div > div div:nth-child(2) {
+  width: 17px;
+  height:  51px;
+  transform: rotate(-45deg);
+  background: #e90c59;
+  border-radius: 0 0 8px 8px;
+  position: absolute;
+  top: 68px;
+  left: 85px
+}
+.lds-circle{
+  width: 200px;
+  height: 200px;
+  display: none;
+  overflow: hidden;
+  background: #ffffff;
+}
+.ldio {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0; /* see note above */
+}
+.ldio div { box-sizing: content-box; }
